@@ -5,6 +5,7 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Gallery from "./pages/Gallery";
 import AddImage from "./pages/AddImage";
+import myimage from "./pages/Myimage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/account" component={Account} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/addimage" component={AddImage} />
+        <Route path="/myimage" component={myimage} />
     </Router>
   );
 }

@@ -26,6 +26,9 @@ const Navbar = () => {
           <NavLink to='/addimage' activeStyle>
             Ajouter une image
           </NavLink>
+          <NavLink to='/myimage' activeStyle>
+            Mes images
+          </NavLink>
         </NavMenu>
         <NavBtn>
           <NavBtnLink to='/signin'>Se connecter</NavBtnLink>
