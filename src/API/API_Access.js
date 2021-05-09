@@ -57,3 +57,10 @@ export function getAllImage() {
     .get(url)
     .then((response) => response.data);
 }
+
+export function getAllImageOnline() {
+  const url = BASE_URL + "images/state/1";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}

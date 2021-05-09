@@ -12,11 +12,8 @@ const Image = (props) => {
         <li className="card">
             <img src={image.link} alt={image.name} />
             <div className="data-container">
-                <ul>
-                    <Link to="/gallery/image" onClick={() => session()}>
-                        test
-                    </Link>
-                </ul>
+                <Link to="/image" onClick={() => session()}>
+                </Link>
             </div>
         </li>
     );

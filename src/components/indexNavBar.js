@@ -15,18 +15,15 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
           <NavLink exact to='/' activeStyle>
-            Accueil
-          </NavLink>
-          <NavLink to='/account' activeStyle>
-            Mon compte
-          </NavLink>
-          <NavLink to='/gallery' activeStyle>
             Galerie
           </NavLink>
-          <NavLink to='/addimage' activeStyle>
+          <NavLink exact to='/addimage' activeStyle>
             Ajouter une image
           </NavLink>
-          <NavLink to='/myimage' activeStyle>
+          <NavLink exact to='/account' activeStyle>
+            Mon compte
+          </NavLink>
+          <NavLink exact to='/myimage' activeStyle>
             Mes images
           </NavLink>
         </NavMenu>
