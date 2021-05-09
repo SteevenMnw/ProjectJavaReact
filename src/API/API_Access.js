@@ -50,3 +50,10 @@ export function deleteCouponForUser(idUser, idCoupon) {
     .put(url, null, { params: { idCoupon } })
     .then((respone) => respone.status);
 }
+
+export function getAllImage() {
+  const url = BASE_URL + "images/all";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}

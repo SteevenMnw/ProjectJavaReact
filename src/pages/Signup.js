@@ -1,7 +1,7 @@
 import React from "react";
 import { addUser, getUserByEmailAndPassword } from "../API/API_Access";
 import { Link } from "react-router-dom";
-import { TextField, Typography, Button } from "@material-ui/core";
+import { TextField, Button } from "@material-ui/core";
 import "../styles/index.scss";
 
 
@@ -61,7 +61,7 @@ class Signup extends React.Component {
         const email = this.state.email;
         const passwd = this.state.passwd;
         const checkPasswd = this.state.checkPasswd;
-        if (passwd == checkPasswd && passwd != "" && checkPasswd != "" && identifier && name && surname && email) {
+        if (passwd === checkPasswd && passwd !== "" && checkPasswd !== "" && identifier && name && surname && email) {
             //Call the API with parameters to add a new user
             addUser(name, surname, identifier, passwd, email)
                 .then(
@@ -73,7 +73,7 @@ class Signup extends React.Component {
                     alert("Une erreur est survenu, veuillez attendre quelque instant et recommencer")
                 );
         }
-        else if (passwd != checkPasswd && identifier && name && surname && email) {
+        else if (passwd !== checkPasswd && identifier && name && surname && email) {
             alert("Les mots de passe ne sont pas identiques.");
         }
         else {
