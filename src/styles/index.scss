@@ -6,56 +6,57 @@ $color-3: #282c34;
 $color-4: rgb(32, 35, 42);
 
 body {
-    font-family: $font-1;
-    color: $color-3;
-    background-color: $color-2;
+  font-family: $font-1;
+  color: $color-3;
+  background-color: $color-2;
 }
 
 // SignIn
 
 .form_signin{
-    margin: 15% auto;
-    width: 250px;
+  margin: 15% auto;
+  width: 250px;
 }
 
 .input_signin{
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .button_signin{
-    margin: 10% 14%;
+  margin: 10% 14%;
 }
 
 .redirection_signin{
-    margin: 20% 30%;
+  margin: 20% 30%;
 }
 
 // SignUp
 
 .form_signup{
-    margin: 10% auto;
-    width: 250px;
+  margin: 10% auto;
+  width: 250px;
 }
 
 .input_signup{
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 .button_signup{
-    margin: 0 14%;
+  margin: 0 14%;
 }
 
 .redirection_signup{
-    margin: 10% 24%;
+  margin: 10% 24%;
 }
 
 // Gallery.js
 
 .images {
-    .sort-container {
+    .sort-images {
+      margin-top: 1%;
       display: grid;
-      grid-template-columns: 20% 80%;
-      padding: 8px;
+      grid-template-columns: 10% 70% 20%;
+      padding: 0px;
       border-radius: 15px;
       background: $color-3;
       color: $color-1;
@@ -68,6 +69,62 @@ body {
         input[type="radio"] {
           transform: translate(-5px, 1px);
         }
+
+        li{
+          list-style: outside none none;
+        }
+      }
+      
+      .MuiOutlinedInput-root {
+        position: relative;
+        border-radius: 15px;
+      }
+
+      .MuiFormLabel-root {
+        color: #61dafb;
+        padding: 0;
+        font-size: 1rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.00938em;
+      }
+
+      .MuiOutlinedInput-input {
+        padding: 16.5px 24px;
+      }
+
+      .MuiInputBase-root {
+        color: #61dafb;
+        cursor: text;
+        display: inline-flex;
+        position: relative;
+        font-size: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        line-height: 1.1876em;
+        letter-spacing: 0.00938em;
+      }
+
+      .MuiOutlinedInput-notchedOutline {
+        border-color: #61dafb;
+        border-width: 2px;
+      }
+
+      .MuiFormLabel-root.Mui-focused{
+        color: #61dafb;
+      }
+
+      .MuiOutlinedInput-root.Mui-focused
+      .MuiOutlinedInput-notchedOutline{
+        border-color: #61dafb;
+        border-width: 2px;
+      }
+
+      .MuiInputLabel-outlined.MuiInputLabel-shrink {
+        transform: translate(14px, -2px) scale(0.75);
       }
     }
     .cancel {
@@ -93,6 +150,7 @@ body {
     .images-list {
       display: flex;
       flex-wrap: wrap;
+      padding: 0 170px;
     }
   }
   
@@ -174,7 +232,7 @@ body {
         margin-top: 1%;
     }
 
-    img {
+    .img {
       display: block;
       margin-left: auto;
       margin-right: auto;

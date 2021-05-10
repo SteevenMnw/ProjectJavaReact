@@ -15,7 +15,7 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
           <NavLink exact to='/' activeStyle>
-            Galerie
+            Gallery
           </NavLink>
           <NavLink exact to='/addimage' activeStyle>
             Ajouter une image

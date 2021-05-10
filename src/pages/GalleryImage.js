@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Navbar from '../components/indexNavBar';
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 const GalleryImage = () => {
     const image = JSON.parse(localStorage.getItem('image'));
 
-    console.log(image)
     const history = useHistory();
 
     const fileDownloadHandler = async (pictureUrl) => {
@@ -33,7 +32,7 @@ const GalleryImage = () => {
                     Retour
                 </Button>
             </div>
-            <img src={image.link} alt={image.name} />
+            <img className="img" src={image.link} alt={image.name} />
             <div className="information">
                 <h4>Créateur : {image.users.identifier}</h4>
                 <div className="categorie">

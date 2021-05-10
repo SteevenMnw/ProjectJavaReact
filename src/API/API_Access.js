@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8082/";
+const BASE_URL = "http://localhost:8888/";
 
 // Récupère tous les utilisateurs
 // https://springmspr.herokuapp.com/users/all
@@ -60,6 +60,13 @@ export function getAllImage() {
 
 export function getAllImageOnline() {
   const url = BASE_URL + "images/state/1";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}
+
+export function getAllCategorie() {
+  const url = BASE_URL + "categories/all";
   return axios
     .get(url)
     .then((response) => response.data);
