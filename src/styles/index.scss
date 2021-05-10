@@ -128,21 +128,23 @@ body {
       }
     }
     .cancel {
-      margin: 20px auto 30px;
+      margin: 15px auto 15px;
       width: 100%;
   
-      h5 {
-        border: 1px $color-3 solid;
+      h4 {
+        border: 2px #61dafb solid;
         text-align: center;
-        width: 180px;
+        padding-top: 10px;
+        width: 300px;
+        height: 30px;
         margin: 0 auto;
         border-radius: 10px;
         transition: 0.3s;
         cursor: pointer;
   
         &:hover {
-          background: $color-1;
-          border-color: $color-1;
+          background: #61dafb;
+          border-color: #61dafb;
         }
       }
     }

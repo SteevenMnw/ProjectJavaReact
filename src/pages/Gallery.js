@@ -13,6 +13,11 @@ const Gallery = () => {
     const [categorie, setCategorie] = useState([]);
     const [search, setSearch] = useState("")
 
+    const stopSearch =() => {
+        setselectedCategorie("");
+        setSearch("");
+    }
+
     useEffect(() => {
         if (playOnce) {
             getAllCategorie().then((res) => setCategorie(res));
@@ -53,6 +58,10 @@ const Gallery = () => {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
+                </div>
+                <div className="cancel">
+                    {selectedCategorie && <h4 onClick={() => stopSearch()}>Annuler la recherche approfondie</h4>
+                    || search && <h4 onClick={() => stopSearch()}>Annuler la recherche approfondie</h4>}
                 </div>
                 <ul className="images-list">
                     {search === "" ? 
