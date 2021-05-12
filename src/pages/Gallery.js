@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/indexNavBar';
-import { getAllImageOnline, getAllCategorie } from '../API/API_Access';
+import { getAllImageOnline, getAllCategories } from '../API/API_Access';
 import CardImage from '../components/CardImage';
 import { TextField } from "@material-ui/core";
 
@@ -20,7 +20,7 @@ const Gallery = () => {
 
     useEffect(() => {
         if (playOnce) {
-            getAllCategorie().then((res) => setCategorie(res));
+            getAllCategories().then((res) => setCategorie(res));
             getAllImageOnline().then((res) => setData(res));
             setPlayOnce(false);
         }
@@ -28,7 +28,7 @@ const Gallery = () => {
         const sortedImages = () => {
           const imagesObj = Object.keys(data).map((i) => data[i]);
           const sortedArray = imagesObj.sort((a, b) => {
-            return b.date - a.date;
+            return a.id - b.id;
           });
           setSortedData(sortedArray.slice(-rangeValue).reverse());
         };
@@ -101,5 +101,4 @@ const Gallery = () => {
         </div>
     );
 };
-//image.description.includes("test") === true || image.name.includes("test") || image.categories.map((res) => res.name).includes("Visage")
 export default Gallery;
