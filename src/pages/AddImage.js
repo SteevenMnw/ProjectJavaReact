@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormAfterUpload from "../components/FormAfterUpload";
-import FormUpload from "../components/FormUpload";
+import FormBeforeUpload from "../components/FormBeforeUpload";
 
 const AddImage = () => {
   const [upload, setUpload] = useState(false);
@@ -14,7 +14,7 @@ const AddImage = () => {
   console.log(dataImage);
 
   if (!upload) {
-    return <FormUpload checkUpload={(data) => checkUpload(data)} />;
+    return <FormBeforeUpload checkUpload={(data) => checkUpload(data)} />;
   } else {
     return <FormAfterUpload dataImage={dataImage} />;
   }

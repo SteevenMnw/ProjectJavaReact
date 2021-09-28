@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { uploadImage } from '../API/API_Access';
 import { TextField } from "@material-ui/core";
 
-const FormUpload = (props) => {
+const FormBeforeUpload = (props) => {
   const { register, handleSubmit } = useForm();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -85,4 +85,4 @@ const FormUpload = (props) => {
   );
 };
 
-export default FormUpload;
+export default FormBeforeUpload;
