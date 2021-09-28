@@ -1,7 +1,7 @@
 import React from "react";
 import { getUserByEmailAndPassword } from "../API/API_Access";
 import { Link } from "react-router-dom";
-import { TextField, Typography, Button } from "@material-ui/core";
+import { TextField, Button } from "@material-ui/core";
 import "../styles/index.scss";
 
 
@@ -56,9 +56,9 @@ class Signin extends React.Component {
             .catch(() =>
               alert("Votre mail ou mot de passe est invalide")
             );
-      } else if (passwd == "" && email) {
+      } else if (passwd === "" && email) {
         alert("Veuillez insérer votre mot de passe.");
-      } else if (email == "" && passwd) {
+      } else if (email === "" && passwd) {
         alert("Veuillez insérer votre mail.");
       } else {
         alert("Veuillez renseigner toutes les informations.");

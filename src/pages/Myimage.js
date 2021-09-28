@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/indexNavBar';
 
-class Home extends React.Component {
+class myimage extends React.Component {
     render(){
         return (
             <Navbar></Navbar>
@@ -9,4 +9,4 @@ class Home extends React.Component {
     }
 };
 
-export default Home;
+export default myimage;

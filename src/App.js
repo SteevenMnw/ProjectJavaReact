@@ -1,20 +1,22 @@
-import Home from "./pages/Home";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import Account from "./pages/Account";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Gallery from "./pages/Gallery";
 import AddImage from "./pages/AddImage";
+import myimage from "./pages/Myimage";
+import GalleryImage from "./pages/GalleryImage";
 
 function App() {
   return (
     <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/signin" component={Signin} />
-        <Route path="/account" component={Account} />
-        <Route path="/gallery" component={Gallery} />
-        <Route path="/addimage" component={AddImage} />
+        <Route path="/" exact component={Gallery} />
+        <Route path="/signup" exact component={Signup} />
+        <Route path="/signin" exact component={Signin} />
+        <Route path="/account" exact component={Account} />
+        <Route path="/addimage" exact component={AddImage} />
+        <Route path="/myimage" exact component={myimage} />
+        <Route path="/image" exact component={GalleryImage} />
     </Router>
   );
 }

@@ -1,18 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8082/";
+const BASE_URL = "http://localhost:8000/";
 
 // Récupère tous les utilisateurs
 // https://springmspr.herokuapp.com/users/all
 export function getAllUsers() {
   const url = BASE_URL + "/users/all";
-  return axios.get(url).then((response) => response.data);
-}
-
-// Récupère l'utilisateur grâce à l'id
-// https://springmspr.herokuapp.com/users/1
-export function getUserById(id) {
-  const url = BASE_URL + "/users/" + id;
   return axios.get(url).then((response) => response.data);
 }
 
@@ -50,3 +43,54 @@ export function deleteCouponForUser(idUser, idCoupon) {
     .put(url, null, { params: { idCoupon } })
     .then((respone) => respone.status);
 }
+
+export function getAllImage() {
+  const url = BASE_URL + "images/all";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}
+
+export function getAllImageOnline() {
+  const url = BASE_URL + "images/state/all";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}
+
+export function getAllCategories() {
+  const url = BASE_URL + "categories/all";
+  return axios
+    .get(url)
+    .then((response) => response.data);
+}
+
+export const uploadImage = (formData) => {
+  const url = BASE_URL + "images/upload";
+  return axios.post(url, formData).then((response) => response.data);
+};
+
+export const analyseImage = (idImage) => {
+  const url = BASE_URL + "images/analyse/" + idImage;
+  return axios.get(url).then((response) => response.data);
+};
+
+export const updateDateImage = (id, formData) => {
+  const url = BASE_URL + "images/date/" + id;
+  return axios.put(url, formData).then((response) => response.data);
+};
+
+export const updateStateImage = (id, formData) => {
+  const url = BASE_URL + "images/state/" + id;
+  return axios.put(url, formData).then((response) => response.data);
+};
+
+export const addCategoriesForImage = (id, formData) => {
+  const url = BASE_URL + "images/addCategorie/" + id;
+  return axios.put(url, formData).then((response) => response.data);
+};
+
+export const addMotsCleForImage = (id, formData) => {
+  const url = BASE_URL + "mots/add/" + id;
+  return axios.put(url, formData).then((response) => response.data);
+};
